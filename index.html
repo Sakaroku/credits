@@ -1,1 +1,299 @@
+Japp. Vi gör det så enkelt som möjligt direkt i webbläsaren – du behöver inte installera Git eller något annat.
 
+1. Skapa sidan
+
+Gå till GitHub och logga in.
+
+Klicka på + uppe till höger → New repository.
+
+Repository-namnet ska vara:
+
+DITT-ANVÄNDARNAMN.github.io
+
+Om ditt GitHub-namn exempelvis är sakaroku:
+
+sakaroku.github.io
+
+Välj Public, slå gärna på Add a README file, och klicka Create repository. Det här är GitHubs officiella upplägg för en personlig GitHub Pages-sajt.
+
+2. Sedan gör vi själva Sakaroku-sidan
+
+När repositoryt är skapat behöver vi en fil som heter:
+
+index.html
+
+GitHub Pages använder bland annat index.html som startsida.
+
+Stanna där.
+
+Skicka gärna en skärmdump när du har skapat repositoryt, så guidar jag dig klick för klick från exakt det du ser. Sedan kan jag ge dig en färdig index.html med hela artistlistan, klickbara Spotify-länkar och Sakaroku-design.
+
+Perfekt — du är på rätt ställe. Du har skapat Sakaroku/credits, och vi kan använda just det repositoryt. Du behöver inte börja om.
+
+Gör så här på sidan du visar:
+
+Klicka Add file.
+Välj Create new file.
+I fältet Name your file... skriver du exakt:
+index.html
+
+När du gjort det får du upp ett stort tomt fält där HTML-koden ska in.
+
+Stanna där och skicka en skärmdump, så ger jag dig hela färdiga Sakaroku-sidan med alla 100 artisterna och deras Spotify-länkar att klistra in. Sedan aktiverar vi GitHub Pages.
+
+Yes, exakt där. Klistra in allt nedan i det stora tomma fältet. Jag har lagt in din kompletta artistlista och gjort sidan mörk, enkel och Sakaroku-anpassad. Artistnamnen är klickbara och öppnar respektive Spotify-profil.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sakaroku — Artist Credits</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #111014;
+        color: #e9e2d8;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 70px 25px 100px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 42px;
+        font-weight: 400;
+        letter-spacing: 8px;
+    }
+
+    .tagline {
+        color: #bca98f;
+        margin-top: 10px;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .intro {
+        max-width: 650px;
+        margin: 30px auto 0;
+        color: #aaa3a9;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #bca98f;
+        border-bottom: 1px solid #302d34;
+        padding-bottom: 12px;
+        margin-bottom: 25px;
+    }
+
+    .artists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 35px;
+    }
+
+    .artist {
+        display: block;
+        text-decoration: none;
+        color: #ded7cf;
+        padding: 9px 12px;
+        border-radius: 5px;
+        transition: 0.15s;
+    }
+
+    .artist:hover {
+        background: #201e24;
+        color: #ffffff;
+        padding-left: 17px;
+    }
+
+    .spotify {
+        color: #777079;
+        font-size: 12px;
+        float: right;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 70px;
+        padding-top: 30px;
+        border-top: 1px solid #302d34;
+        color: #777079;
+        font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+        .artists {
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        .container {
+            padding-top: 45px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>SAKAROKU</h1>
+    <div class="tagline">HUMAN-MADE BEATS</div>
+
+    <div class="intro">
+        Artists featured on Sakaroku Radio.<br>
+        Click an artist to visit their Spotify profile.
+        <br><br>
+        All music remains the property of its respective artists and
+        rightsholders and is played with permission or under the
+        applicable license.
+    </div>
+</header>
+
+<h2>ARTIST CREDITS</h2>
+
+<div class="artists">
+
+<a class="artist" href="https://open.spotify.com/artist/5WjSn8i1BGc2BPTzMxAghd" target="_blank">a bowl of rice <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/7HWiJb3mzF3vnEYs0wIBdJ" target="_blank">Adam Dejnarowicz <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5exJeWiFSaSkGtUAThzDB2" target="_blank">alcinous <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/7ulf45VD9Q3ZazcIG3v79P" target="_blank">alhivi <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5CbxdKPVZYTerXefc8GqAg" target="_blank">Aniket <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2l6NmomazGa6gMJQPzhcS1" target="_blank">Apollw <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5ijyJAflvGUkt5ctox73gf" target="_blank">Aurora B.Polaris <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2XCHpjjS3zJJy9OafEt7bC" target="_blank">Ayzic <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2wN547qIRRSNNG3JKxnNsp" target="_blank">b.akai <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3guhmCaFBa3ixLAQkTlcsD" target="_blank">Buttersweet <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2gA4dVQbXci5FwTVlqgphl" target="_blank">Cauzy <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2f8JIAu0okvEPCyqVKIm25" target="_blank">Chae <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5ffORofXMmNRRtwIeQsyW3" target="_blank">Charlee Nguyen <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3bQJfGrGvhxgCVrojc0pm3" target="_blank">Chilliax <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2JlCuLPlSFcgh1KvuAjERU" target="_blank">cloud_gzr <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4SYTMJWp1zw7CeOqO6Nk2K" target="_blank">CMT8 <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4CHVFfmgOpcOMB3d3B0uwO" target="_blank">Colours in Context <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/1B83te5eJCjyjR5b9s7h3I" target="_blank">Cvsket Pretty <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0diXRBzOdGZ4i0TKs8Xakh" target="_blank">Daemon <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3CEJ5kBVJx2hrk8bsEf8lp" target="_blank">darecloud <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2MoOvRAcAFdqZuArPg6qae" target="_blank">David North <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3WOrrOBvpsk3noSkNQgRxj" target="_blank">Deep In A Dream <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0N2on1pgu8mv01ch9Cs9XF" target="_blank">DJ Garlik <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/50gpOabMr60yHviIA8gNY6" target="_blank">drmycat <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4rS5YqGle242fTdHjfNk6L" target="_blank">Dylan Boote <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5VpbcId2F776OU7UewztZO" target="_blank">e s c p <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6UFQmSPDWaWReDLcCrPyNL" target="_blank">Early Garden <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/11ArDrOi99fO8fvYxWVUb9" target="_blank">Echoboy <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0Ql6S1E3Q82eyX6VbAz3bm" target="_blank">ElaZ <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4EUMzs3VfIVjB5yrHv153S" target="_blank">Erwin Do <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3Te1e4bESVFb1KcrMSmvhC" target="_blank">Gerardo Millán <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2J8dwHY5GMiTVlCOHiDfXO" target="_blank">goomdan <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0f1wG4nrFzA7sc92lDeItL" target="_blank">Gyûki <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3LFNqZ5k6goSIDOUUGqOmk" target="_blank">Handel <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2rFUcncQelfj2NuqQZKssx" target="_blank">Hizashi <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/48SdvoENFHoqTTa1SzvhRw" target="_blank">Homework Radio <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5bH4uA7ERJ2A6EIWa7eHwQ" target="_blank">icey wavs <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0WF7BRwfiV4PubUtmmNL1U" target="_blank">im.fine <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2meYskUwJ0LnnuaG5xybWr" target="_blank">Immerson <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2i1Sm6KCGynVL4RRFo1fr7" target="_blank">InternalEye <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/1s5AU7XXnk8m2rCibwzyy3" target="_blank">Jaben. <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/03J6WM7FvOQZfszAVknxVs" target="_blank">Kaiyo <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5d07MpiIaNmmEMTq79KAga" target="_blank">Kazukii <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/79gmw6DfOhAMlZv9bbzti6" target="_blank">knuni <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/1dSbVVizZlEH0XqcMJ5jJ8" target="_blank">Kubuch <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/1RbHqyLEOuXC9fy1me1VFJ" target="_blank">landq <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/52wkMMF7s4aXTW4WYKvKmC" target="_blank">Late Night Tones <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4oqcsvplou6IzSEEpJ1pxw" target="_blank">Levah <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2wIeBTEs0AsPb74kYdEcNk" target="_blank">Linearwave <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6TEf8a5eAulCH644EY9Hvf" target="_blank">Lofi Koji <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6CnIDZGUocwG0NIyYkoJ7w" target="_blank">Lofi Sax <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0NA9RjFnSsIlj1FUMhfuow" target="_blank">Lost Files <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6MzDAmtVfhn4nnlAhE4Ewa" target="_blank">lost.mindd <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0lLJ8QF3moQMRXiwOaZZUY" target="_blank">Luca Skyline <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/031Vp2J0KxdRPynrvxlx6r" target="_blank">Lxpse <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2AKgGBfh9VTGHTtT2hkylm" target="_blank">LXVE AFTR <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4dEG3k0HWAI1NltH7UI5Nv" target="_blank">Mellow Dive <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4oD4H78vf32cnX0sfhtdX6" target="_blank">Mezzart <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/7AObJiF0vqNNnysunp45om" target="_blank">Mindr <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4d8Fcih9xLX58y7r7LAPKV" target="_blank">Muerto A Puntapiés <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/24EBk1z8Q7zppOqXGctcnr" target="_blank">MujjO <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4APqT2sYo23EEpgf9096qj" target="_blank">muukko <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4Ck1JIZA91251fV2hyHGHK" target="_blank">MyceliumBug <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0vABYweyJunNI8gFdnxXps" target="_blank">nate2timez <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2LfwnXXH6HdeP825h4u7lt" target="_blank">Naute <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2WX7ariBgaxbv7XOjO8GGt" target="_blank">Nessen <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5Lgrv4fPPIHbdJ47qd46et" target="_blank">No Sormal <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4OFZyUhVwfmPVGd6Bw0N6q" target="_blank">Nydia <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0iDdQJR7KNqTxbjTU2sdXl" target="_blank">nz <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2rPCLX9rh1xFeRCTUCD5R6" target="_blank">oakbear <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0YAkOkbeAPiS35qyouiM4O" target="_blank">Oatmello <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6LhkZAXeIA7HiigDvecUcI" target="_blank">Odem Medo <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0ixhosSnDrcxrW8ylF4yXj" target="_blank">ourcq <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/7CXCeWlWkqWbv52mXA5zNq" target="_blank">Peachypie <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0iMWUBpWAGKAenBVePrZFP" target="_blank">Project AER <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6N407txr8AqdSiNQvsXv6G" target="_blank">Purpl3Alien <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/73aKnLT4O8G2pBEfdlQzrE" target="_blank">Purrple Cat <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3cYzpmIsbtgqFqBll2SA5P" target="_blank">Raccoon With a Groovebox <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5auXvKhni4UikpSBUg3Wdh" target="_blank">Radar Pressed Record <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/234bJca6lBtwaEK4IpHtD3" target="_blank">rj one <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2cdb2U5hrSfprEgLTrPDwl" target="_blank">Rjoseph <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/48XozkeJU7sbKjb0DG40ts" target="_blank">sage green <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/2B2VQgv9I3qLpqKFtNxITs" target="_blank">saikai <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4KZj9rS07i3nfijzVtkqMQ" target="_blank">saint rumi <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0kxCmMXOb0omXBHrPDNb0G" target="_blank">Sakaroku <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/6JP9OPYGzSVaWQWdRoYQFi" target="_blank">Smoothbrew <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5qXb2k1THc04mE2x1QGxlv" target="_blank">someday <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/73YeuiHEyTRF6f5SBsSrX5" target="_blank">srnioh <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4ApyJoQGYHAcMtJEvK5tRx" target="_blank">steezy prime <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/1pvbdPT4qv8egDvkcOhBN0" target="_blank">Swink <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4n75BHXES8LQFsstrJDQa3" target="_blank">The Yellow One <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3Z9OuAjJsitd2yLGCq7q6A" target="_blank">Theo Juarez <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/5g88sbQWeP0jK9T2v7msuP" target="_blank">Thức Lê <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/4k4EIaXDU8iKDBMRhrV6Ic" target="_blank">Tyler.l <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/7qARU0sMoDEdpD8zyvmjcx" target="_blank">Uinzagui <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/0DiaqE7U7XAxta1bM6Pu4e" target="_blank">VibeWithLeafy <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/66UE5LrivDsDSLdDcK9Qri" target="_blank">wind-up bird <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/52ZLqRmHoenePZnJpjjnRn" target="_blank">YODAKA <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/3nHodZxQw99Ewvb9v9x48u" target="_blank">Yotsugi <span class="spotify">Spotify ↗</span></a>
+<a class="artist" href="https://open.spotify.com/artist/03JQ4UCT2IVx2Z6AVsFmFk" target="_blank">Zanelatto <span class="spotify">Spotify ↗</span></a>
+
+</div>
+
+<footer>
+    SAKAROKU RADIO<br>
+    Made by humans. Played by humans.
+</footer>
+
+</div>
+
+</body>
+</html>
+
+När allt är inklistrat: klicka på gröna Commit changes… uppe till höger och sedan Commit changes igen i rutan som kommer upp.
+
+Därefter går vi till Settings → Pages och gör sidan publik.
